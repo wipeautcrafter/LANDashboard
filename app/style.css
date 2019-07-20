@@ -1,0 +1,35 @@
+.app {
+  display: flex;
+  flex-direction: column;
+
+  height: 100vh;
+  width: 100vw;
+
+  overflow: hidden;
+}
+.jumbotron {
+  text-align: center;
+  padding: 1em;
+  margin: 0;
+
+  display: flex;
+}
+.about {
+  flex: 1 1 auto;
+}
+.infobox {
+  flex: 1 1 auto;
+}
+.title {
+  font-weight: 800;
+  font-size: 2rem;
+}
+.content {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(50%, 1fr));
+  place-items: stretch;
+
+  flex: 1 1 auto;
+}

@@ -1,0 +1,36 @@
+{
+  "name": "landashboard",
+  "version": "1.0.0",
+  "description": "A Dashboard for everyone in the LAN Party to look at. This can be configured to show everything from game server information to up to 4 livestreams!",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wipeautcrafter/LANDashboard.git"
+  },
+  "keywords": [
+    "lanparty",
+    "lan",
+    "dashboard",
+    "livestream",
+    "stream",
+    "live",
+    "obs",
+    "game",
+    "gaming"
+  ],
+  "author": "wipeaut",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wipeautcrafter/LANDashboard/issues"
+  },
+  "homepage": "https://github.com/wipeautcrafter/LANDashboard#readme",
+  "dependencies": {
+    "electron": "^5.0.7",
+    "express": "^4.17.1",
+    "node-media-server": "^2.1.2",
+    "socket.io": "^2.2.0"
+  }
+}
