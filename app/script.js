@@ -10,6 +10,7 @@ socket.on("update", function(data) {
   if(diff > 0) {
     for(let i = 0; i < diff; i++) {
       let url = "http://localhost:8000/live/"+i+".flv";
+      console.log(url);
       const el = $('<video controls autoplay></video>').appendTo(".content")[0];
 
       let player = flvjs.createPlayer({

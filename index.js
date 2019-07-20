@@ -66,9 +66,9 @@ app.on("ready", function() {
   });
 
   win.loadFile(path.join(__dirname, "app", "index.html"));
-  win.setMenu(null);
+  // win.setMenu(null);
   win.maximize();
-  win.setFullScreen(true);
+  // win.setFullScreen(true);
 });
 
 nms.run();
