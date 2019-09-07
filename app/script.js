@@ -5,24 +5,27 @@ socket.on("update", function(data) {
   $(".subtitle").html(data.subtitle);
   $(".info").html(data.info);
 
-  for(let i = 0; i < data.streams; i++) {
-    let url = "http://localhost:8000/live/"+i+".flv";
-    console.log(url);
-    const el = $('<video controls autoplay></video>').appendTo(".content")[0];
+  if(data.streams !== $(".content").children().length) {
+    $(".content").html("");
 
-    let player = flvjs.createPlayer({
-        type: 'flv',
-        url: url
-    },
-    {
-        enableWorker: false,
-        lazyLoadMaxDuration: 3 * 60,
-        seekType: 'range',
-    });
+    for(let i = 0; i < data.streams; i++) {
+      let url = "http://localhost:8000/live/"+i+".flv";
+      const el = $('<video controls autoplay></video>').appendTo(".content")[0];
 
-    player.attachMediaElement(el);
-    player.load();
-    player.play();
+      let player = flvjs.createPlayer({
+          type: 'flv',
+          url: url
+      },
+      {
+          enableWorker: false,
+          lazyLoadMaxDuration: 3 * 60,
+          seekType: 'range',
+      });
+
+      player.attachMediaElement(el);
+      player.load();
+      player.play();
+    }
   }
 });
 
