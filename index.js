@@ -1,4 +1,5 @@
 const {app, BrowserWindow} = require("electron");
+const ip = require("ip");
 const path = require("path");
 
 const NodeMediaServer = require('node-media-server');
@@ -24,8 +25,8 @@ const io = require("socket.io")(http);
 const config = {
   title: '<i class="fas fa-gamepad"></i> LAN Dashboard',
   subtitle: 'Here you can see some streaming action!',
-  info: '<div><b>IP ADRES</b></div><h4 class="mt-2">wipeaut.nl</h4>',
-  streams: 1
+  info: `<div><b>IP ADRES</b></div><h4 class="mt-2">${ip.address()}</h4>`,
+  streams: 4
 };
 
 let appConnected = false;
