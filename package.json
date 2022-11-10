@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/wipeautcrafter/LANDashboard#readme",
   "dependencies": {
-    "electron": "^9.4.0",
+    "electron": "^18.3.7",
     "express": "^4.17.1",
     "ip": "^1.1.5",
     "node-media-server": "^2.3.8",
