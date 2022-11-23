@@ -32,6 +32,6 @@
     "express": "^4.17.1",
     "ip": "^1.1.5",
     "node-media-server": "^2.3.8",
-    "socket.io": "^2.4.1"
+    "socket.io": "^2.5.0"
   }
 }
